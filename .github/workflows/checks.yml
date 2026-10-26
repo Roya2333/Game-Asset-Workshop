@@ -1,0 +1,23 @@
+name: Plugin checks
+on:
+  push:
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: windows-latest
+    defaults:
+      run:
+        working-directory: plugin-build
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: corepack enable
+      - run: corepack pnpm install --frozen-lockfile
+      - run: node --test tests/*.test.mjs tests/workspace/*.test.mjs
+      - run: node build.mjs
+      - run: node verify-mcp.mjs
+      - run: node package-plugin.mjs

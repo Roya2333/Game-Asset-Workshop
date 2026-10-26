@@ -1,0 +1,3 @@
+import test from 'node:test';import assert from 'node:assert/strict';import {assetName,documentName,safeName,uniqueName} from '../../workspace/file-names.js';
+test('人物、三视图和表情使用类型名称用途，保留候选及历史区分',()=>{const d={type:'character',title:'旧名',character:{name:'男人1'}};assert.equal(documentName(d),'人物-男人1');assert.equal(assetName(d,'character.files.portrait'),'人物-男人1');assert.equal(assetName(d,'character.files.candidate:view-正面'),'人物-男人1-三视图-正面-待修改');assert.equal(assetName(d,'character.files.expression-开心'),'人物-男人1-表情-开心');});
+test('名称不能穿越目录，重名不覆盖另一个条目',()=>{assert.ok(!safeName('../人物:甲').includes('/'));const names=new Map();assert.equal(uniqueName('人物-甲','png','first-id',names),'人物-甲.png');assert.equal(uniqueName('人物-甲','png','second-id',names),'人物-甲-second-i.png');});

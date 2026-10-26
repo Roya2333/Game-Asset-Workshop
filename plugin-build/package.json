@@ -1,0 +1,25 @@
+{
+  "name": "narrative-plugin-build",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "@modelcontextprotocol/ext-apps": "^2.0.3",
+    "@modelcontextprotocol/sdk": "^1.32.1",
+    "ag-psd": "^32.0.0",
+    "esbuild": "^0.28.2",
+    "pngjs": "^7.0.0",
+    "zod": "^4.6.7"
+  },
+  "scripts": {
+    "build": "node build.mjs",
+    "test": "node --test tests/*.test.mjs tests/workspace/*.test.mjs",
+    "check": "node --check workspace/app.js && node --check src/server.mjs",
+    "verify:mcp": "node verify-mcp.mjs",
+    "verify:tts": "node check-mcp-tts.mjs",
+    "dev": "node dev.mjs"
+  },
+  "packageManager": "pnpm@11.25.0",
+  "engines": {
+    "node": ">=22"
+  }
+}

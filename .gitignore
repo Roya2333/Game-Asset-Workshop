@@ -1,0 +1,34 @@
+# Dependencies and build caches
+node_modules/
+.pnpm-store/
+*.log
+.DS_Store
+Thumbs.db
+# Credentials and host-private settings
+.env
+.env.*
+!.env.example
+.bridge.md
+.private-settings.md
+**/.bridge.md
+**/.private-settings.md
+*.pem
+*.pfx
+*.p12
+# Game projects and model/runtime data
+项目资料/
+当前内容/
+完整备份/
+本地TTS/
+**/本地TTS/
+**/完整备份/
+app/local-tts/
+checkpoints/
+checkpoints-2.5/
+.venv/
+__pycache__/
+*.pyc
+# Local packaging and developer-only verification outputs
+releases/
+github-release/
+verification/

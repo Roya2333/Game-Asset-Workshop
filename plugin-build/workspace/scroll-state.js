@@ -1,0 +1,3 @@
+const selectors=['.workspace','.sidebar','.directory-scroll','.item-table-wrap'];
+export function captureScroll(doc){return {page:doc.scrollingElement?{top:doc.scrollingElement.scrollTop,left:doc.scrollingElement.scrollLeft}:null,areas:selectors.flatMap(selector=>[...doc.querySelectorAll(selector)].map((el,index)=>({selector,index,top:el.scrollTop,left:el.scrollLeft})))};}
+export function restoreScroll(doc,state){if(!state)return;for(const item of state.areas){const el=doc.querySelectorAll(item.selector)[item.index];if(el){el.scrollTop=item.top;el.scrollLeft=item.left;}}if(state.page&&doc.scrollingElement){doc.scrollingElement.scrollTop=state.page.top;doc.scrollingElement.scrollLeft=state.page.left;}}

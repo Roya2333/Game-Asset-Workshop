@@ -1,0 +1,15 @@
+{
+  "mcpServers": {
+    "narrative-studio": {
+      "type": "stdio",
+      "command": "node",
+      "args": [
+        "${PLUGIN_ROOT}/server/index.mjs"
+      ],
+      "cwd": "${PLUGIN_ROOT}",
+      "env": {
+        "NARRATIVE_PORT": "4174"
+      }
+    }
+  }
+}

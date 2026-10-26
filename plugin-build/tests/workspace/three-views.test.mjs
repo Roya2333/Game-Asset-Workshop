@@ -1,0 +1,5 @@
+import test from 'node:test';import assert from 'node:assert/strict';import {threeViewRequest,expressionBatchRequest} from '../../workspace/three-views.js';
+test('一键三视图使用候选主图并分别指定三个保存位置，保持逐次版本读取',()=>{const doc={character:{files:{'candidate:portrait':{fileId:'main'}},imageSettings:{width:1024,height:1024}}};const prompt=threeViewRequest(doc,'保持发型');for(const text of ['main','view-正面','view-侧面','view-背面','read_content','待修改','保持发型'])assert.ok(prompt.includes(text));assert.ok(prompt.includes('不生成三视图拼接图'));});
+test('主图缺失时先提示创建，避免无参考三视图身份漂移',()=>{assert.throws(()=>threeViewRequest({character:{files:{}}}),/请先生成或添加人物主图/);});
+
+test('全部表情继承下方尺寸格式透明属性、自定义表情去重并保留单项要求',()=>{const d={character:{files:{portrait:{fileId:'hero'}},expressions:['开心','冷笑'],imageSettings:{width:768,height:1024,format:'webp',transparent:true},imageRequests:{'expression-冷笑':'轻微嘴角上扬'}}};const prompt=expressionBatchRequest(d,['正常','开心']);for(const value of ['3 张','768x1024','webp','transparent','expression-冷笑','轻微嘴角上扬','hero','read_content'])assert.ok(prompt.includes(value));});

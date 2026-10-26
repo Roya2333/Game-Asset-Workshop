@@ -1,0 +1,3 @@
+export const NAV_FOLDERS=['策划文档','人物创建','道具列表','道具图标','道具音效','技能列表','技能图标','技能音效','技能词条','剧本管理','人物对白','UI 管理','音乐','其他音效','素材库','生成记录','垃圾桶'];
+export function documentFolder(d){return {script:'策划文档',character:'人物创建',item:'道具列表',skill:'技能列表',term:'技能词条',narrative:'剧本管理',ui:'UI 管理',music:'音乐',sound:'其他音效',asset:'素材库'}[d.type]||'素材库';}
+export function attachmentFolder(d,mime){if(d.type==='item')return mime.startsWith('audio/')?'道具音效':'道具图标';if(d.type==='skill')return mime.startsWith('audio/')?'技能音效':'技能图标';if(d.type==='narrative'&&mime.startsWith('audio/'))return '人物对白';return documentFolder(d);}

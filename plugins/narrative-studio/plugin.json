@@ -1,0 +1,35 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "narrative-studio",
+  "version": "0.5.1",
+  "description": "Local game content generation and asset workspace with Markdown storage and IndexTTS 2.5.",
+  "author": {
+    "name": "管理工坊"
+  },
+  "extensions": {
+    "com.openai": {
+      "requires_local_executor": true,
+      "onboardingSkill": "./skills/setup/SKILL.md",
+      "interface": {
+        "displayName": "管理工坊",
+        "shortDescription": "用对话创作游戏内容，资料保存在本机",
+        "longDescription": "总设定、人物、道具、技能、词条、音乐、音效、对话音频与素材管理。ChatGPT 直接读写本地 MD，并调用本地 IndexTTS 2.5。",
+        "developerName": "管理工坊",
+        "category": "Productivity",
+        "capabilities": [
+          "Read",
+          "Write",
+          "Interactive"
+        ],
+        "defaultPrompt": [
+          "打开管理工坊，查看我的游戏项目。",
+          "参考世界观，创建游戏内容并保存回项目。",
+          "检查本地 TTS，为已关联人物的对白生成配音。"
+        ],
+        "logo": "./assets/icon.svg",
+        "composerIcon": "./assets/icon.svg",
+        "brandColor": "#247B6E"
+      }
+    }
+  }
+}
