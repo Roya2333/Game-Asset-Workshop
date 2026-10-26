@@ -1,7 +1,7 @@
 {
   "name": "narrative-studio",
   "version": "0.5.1",
-  "description": "Local game content generation and asset workspace with Markdown storage and IndexTTS 2.5.",
+  "description": "GPT-powered local 2D game asset generation and management for indie developers and small teams, with structured planning, image review, and optional local IndexTTS 2.5 voiceovers.",
   "author": {
     "name": "管理工坊"
   },
@@ -10,8 +10,8 @@
   "requires_local_executor": true,
   "interface": {
     "displayName": "管理工坊",
-    "shortDescription": "用对话创作游戏内容，资料保存在本机",
-    "longDescription": "总设定、人物、道具、技能、词条、音乐、音效、对话音频与素材管理。ChatGPT 直接读写本地 MD，并调用本地 IndexTTS 2.5。",
+    "shortDescription": "面向各类 2D 游戏的 AI 素材生成与管理",
+    "longDescription": "面向各类 2D 游戏的素材生成与管理工作台，适用于横版、动作、射击、RPG、策略、模拟经营、解谜、卡牌及视觉小说等。通过 GPT 原生能力生成文字和图片，关联策划、人物、道具、技能与 UI 素材，并使用本地 IndexTTS 2.5 制作人物对白。所有板块按需使用，字段可留空。",
     "developerName": "管理工坊",
     "category": "Productivity",
     "capabilities": [
@@ -20,8 +20,8 @@
       "Interactive"
     ],
     "defaultPrompt": [
-      "打开管理工坊，查看我的游戏项目。",
-      "参考世界观，创建游戏内容并保存回项目。",
+      "打开管理工坊，查看我的 2D 游戏素材项目。",
+      "根据我的 2D 游戏玩法和美术要求，创建素材并保存回项目。",
       "检查本地 TTS，为已关联人物的对白生成配音。"
     ],
     "logo": "./assets/icon.svg",

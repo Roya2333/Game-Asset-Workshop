@@ -1,9 +1,9 @@
 ---
 name: game-workspace
-description: Use when the user creates or manages game settings, characters, items, skills, glossary entries, music, sound effects, dialogue audio, images, or local IndexTTS2 tasks in Management Studio.
+description: Use when the user generates or manages 2D game assets, planning, characters, icons, items, skills, UI graphics, audio resources, or local IndexTTS 2.5 voiceovers in Game Asset Workshop.
 ---
 
-使用管理工坊工具直接读取和写入本机项目，不要求用户复制提示词、导出 JSON 或搬运 MD。
+管理工坊面向各类 2D 游戏的 AI 素材生成与管理，适用于横版、动作、射击、RPG、策略、模拟经营、解谜、卡牌及视觉小说等。按项目需要选择模块，不假定每款游戏都有剧情、人物或技能，字段可留空。使用工具直接读取和写入本机项目，不要求用户复制提示词、导出 JSON 或搬运 MD。
 
 先调用 list_projects，确认项目 ID。需要界面时调用 open_workspace。修改前调用 read_content 或 read_project，使用返回的最新 revision；版本冲突时重新读取，不覆盖另一入口的更新。
 

@@ -1,6 +1,6 @@
 ---
 name: setup
-description: Use when setting up the local Management Studio plugin or diagnosing its project workspace and local TTS connection.
+description: Use when setting up Game Asset Workshop for local 2D game asset generation and management, or diagnosing its project workspace and local TTS connection.
 ---
 
 调用 open_workspace 检查本地服务和工作台，再调用 list_projects 确认项目目录可读。项目资料保留在本机，不上传项目到云端；本次迁移不导入旧浏览器测试资料。

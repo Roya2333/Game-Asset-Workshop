@@ -2,9 +2,9 @@
 
 # Game Asset Workshop · 管理工坊
 
-**A local GPT-powered plugin for indie game developers to create and manage game design, characters, items, skills, UI assets, and dialogue voiceovers—all in one workspace.**
+**A GPT-powered local workspace for generating and managing assets for all kinds of 2D games—characters, icons, UI graphics, design data, audio resources, and dialogue voiceovers.**
 
-**通过 GPT 创建和管理游戏策划、人物、道具、技能、UI 素材与对白配音，让独立游戏开发者在同一个工作空间完成创作与整理。**
+**面向各类 2D 游戏的 AI 素材生成与管理插件，通过 GPT 统一创建和管理人物、图标、UI 图片、策划数据、音频资源与对白配音。**
 
 Version / 版本: **0.5.1 — Early Access / 早期试用版**
 
@@ -14,9 +14,9 @@ Version / 版本: **0.5.1 — Early Access / 早期试用版**
 
 ### Overview
 
-Game Asset Workshop connects a local game-content workspace to GPT. Describe what you need in the conversation, let GPT use your project's settings as context, and review generated content and assets in the workspace.
+Game Asset Workshop connects a local 2D game asset workspace to GPT. Describe the assets you need in the conversation, let GPT use your project settings as context, and generate, organize, review, and export them in one place.
 
-It is built for independent developers making narrative games, visual novels, RPGs, and other games that need consistent settings and reusable assets. Small teams can use it in their workflows; live collaboration and team synchronization are not implemented.
+It is built for independent developers and small teams making all kinds of 2D games: platformers, action games, shooters, adventures, RPGs, strategy games, simulation and management games, puzzles, card games, and visual novels. Modules and planning fields are optional, so each project can use only what it needs. Live collaboration and team synchronization are not implemented.
 
 The public product name is **Game Asset Workshop / 管理工坊**. Its internal plugin ID remains `narrative-studio` for compatibility.
 
@@ -152,9 +152,9 @@ The 0.5.x checks include **134 automated tests**, **27 MCP tools**, independent-
 
 ### 工具介绍
 
-**管理工坊**是一款面向独立游戏开发者的本地 GPT 插件，适合剧情游戏、视觉小说、RPG，以及需要统一设定和批量素材的其他游戏。
+**管理工坊**是一款面向独立开发者和小型团队的 **2D 游戏 AI 素材生成与管理插件**，适用于各类 2D 游戏，包括横版平台、动作、射击、冒险、RPG、策略、模拟经营、解谜、卡牌、剧情和视觉小说。
 
-先整理世界观和玩法，再让 GPT 根据这些设定创建人物、道具、技能、界面与对白。生成结果直接保存到项目，在插件中查看、修改和确认，减少聊天、表格与文件夹之间的反复复制。
+按游戏需要选择板块，填写玩法、风格或其他基础要求，再让 GPT 创建人物、图标、道具、技能、界面与对白等 2D 游戏素材。各板块与字段均可按需使用，不要求每款游戏都有世界观、剧情、人物或技能。生成结果直接保存到项目，统一查看、修改、确认和交付。
 
 英文项目名为 **Game Asset Workshop**，内部插件标识保留为 `narrative-studio`，兼容已有安装。
 
