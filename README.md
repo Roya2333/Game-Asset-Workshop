@@ -8,7 +8,7 @@
 
 Version / 版本: **0.5.1 — Early Access / 早期试用版**
 
-[English](#english) · [简体中文](#简体中文) · [Download / 下载插件](dist/Game-Asset-Workshop-0.5.1.zip) · [Issues / 问题反馈](https://github.com/Roya2333/Game-Asset-Workshop/issues)
+[English](#english) · [简体中文](#简体中文) · [Download / 下载插件](https://github.com/Roya2333/Game-Asset-Workshop/releases/download/v0.5.1/Game-Asset-Workshop-0.5.1.zip) · [Issues / 问题反馈](https://github.com/Roya2333/Game-Asset-Workshop/issues)
 
 ## English
 
@@ -67,7 +67,7 @@ The ordinary ChatGPT website cannot run this ZIP as a local plugin. Other MCP cl
 
 ### Installation
 
-1. Download [the plugin ZIP](dist/Game-Asset-Workshop-0.5.1.zip) and extract it completely.
+1. Download [the plugin ZIP](https://github.com/Roya2333/Game-Asset-Workshop/releases/download/v0.5.1/Game-Asset-Workshop-0.5.1.zip) and extract it completely.
 2. Open the extracted `narrative-studio` folder and run `安装管理工坊.cmd`.
 3. Restart the desktop host, enable **管理工坊**, and ask it to **“Open Game Asset Workshop.”**
 4. Create your own project, enter a name, and choose its save location.
@@ -181,7 +181,7 @@ The 0.5.x checks include **134 automated tests**, **27 MCP tools**, independent-
 
 需要 **Windows 10/11、Node.js 22+，以及支持本地插件执行和 MCP Apps 的桌面宿主**。安装助手采用 Codex 桌面本地插件方式，普通 ChatGPT 网页端无法直接运行本地 ZIP。
 
-1. 下载并完整解压 [通用插件包](dist/Game-Asset-Workshop-0.5.1.zip)。
+1. 下载并完整解压 [通用插件包](https://github.com/Roya2333/Game-Asset-Workshop/releases/download/v0.5.1/Game-Asset-Workshop-0.5.1.zip)。
 2. 进入 `narrative-studio` 文件夹，双击 `安装管理工坊.cmd`。
 3. 安装后重启桌面应用，在本地聊天中启用「管理工坊」。
 4. 发送“打开管理工坊”，创建自己的项目并选择保存地址。
