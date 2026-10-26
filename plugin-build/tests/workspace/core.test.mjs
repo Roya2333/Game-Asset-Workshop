@@ -19,11 +19,11 @@ test('预览转义脚本并拒绝危险链接',()=>{
 });
 test('提示词包含指定文档、图片用途和保留要求',()=>{
   const p=fixtureProject();const prompt=buildPrompt({doc:p.docs[3],refs:[p.docs[0]],images:[{name:'服饰.png',note:'只参考布料',avoid:'现代装饰'}],action:'生成立绘',request:'换冬装',preserve:'保留面容'});
-  for(const value of ['世界观总纲','只参考布料','现代装饰','保留面容','换冬装'])assert.ok(prompt.includes(value));
+  for(const value of ['测试世界观','只参考布料','现代装饰','保留面容','换冬装'])assert.ok(prompt.includes(value));
 });
 test('ZIP 包完整保留中文 MD 和二进制附件',async()=>{
-  const raw=new Uint8Array([0,1,127,255]);const blob=await createZIP([{name:'剧本/世界观.md',data:'# 世界\n\n雾海'},{name:'资源/图.png',data:new Blob([raw])}]);
-  const files=await readZIP(blob);assert.equal(files.length,2);assert.equal(new TextDecoder().decode(files[0].data),'# 世界\n\n雾海');assert.deepEqual(files[1].data,raw);
+  const raw=new Uint8Array([0,1,127,255]);const blob=await createZIP([{name:'剧本/世界观.md',data:'# 世界\n\n测试内容'},{name:'资源/图.png',data:new Blob([raw])}]);
+  const files=await readZIP(blob);assert.equal(files.length,2);assert.equal(new TextDecoder().decode(files[0].data),'# 世界\n\n测试内容');assert.deepEqual(files[1].data,raw);
 });
 test('损坏的 ZIP 校验失败',async()=>{
   const blob=await createZIP([{name:'a.md',data:'hello'}]);const bytes=new Uint8Array(await blob.arrayBuffer());bytes[34]^=1;await assert.rejects(()=>readZIP(new Blob([bytes])));
@@ -39,7 +39,7 @@ test('章节参与人物去重加入 AI 参考，并保存到 MD',()=>{
   assert.ok(isChapter(chapter));assert.ok(!isChapter(p.docs[0]));
   const refs=referenceDocs(chapter,p.docs);assert.equal(refs.filter(d=>d.id==='char1').length,1);
   assert.deepEqual(JSON.parse(parseMD(serializeMD(chapter)).meta.participants),['char1']);
-  assert.ok(buildPrompt({doc:chapter,refs,action:'完善章节'}).includes('灰绿色眼睛'));
+  assert.ok(buildPrompt({doc:chapter,refs,action:'完善章节'}).includes('TEST_CHARACTER_REFERENCE'));
 });
 test('音乐与音效具有独立类型和 MD 模板',()=>{
   assert.equal(TYPES.script.label,'策划文档');assert.equal(TYPES.music.label,'音乐');assert.equal(TYPES.sound.label,'音效');
